@@ -211,20 +211,29 @@
           null
         ]
       },
-      "/Users/ericchon/turing/3mod/projects/sweater_weather/app/poros/coordinates.rb": {
+      "/Users/ericchon/turing/3mod/projects/sweater_weather/app/services/weather_service.rb": {
         "lines": [
           1,
           1,
+          1,
+          null,
+          null,
+          1,
           null,
           1,
           1,
           1,
           null,
+          null,
+          null,
+          1,
+          1,
+          1,
           null,
           null
         ]
       }
     },
-    "timestamp": 1646602490
+    "timestamp": 1646602674
   }
 }

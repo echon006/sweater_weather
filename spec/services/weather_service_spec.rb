@@ -14,6 +14,10 @@ RSpec.describe WeatherService do
 
         expect(response).to have_key :daily
         expect(response[:daily]).to be_an Array
+
+        expect(response).not_to have_key :minutely
+        expect(response).not_to have_key :aletrs
+
     end
   end
 end
