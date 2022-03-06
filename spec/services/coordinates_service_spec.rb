@@ -1,10 +1,10 @@
 require 'rails_helper'
 
-RSpec.describe CoordinateService do
+RSpec.describe CoordinatesService do
   describe 'class methods' do
     describe 'get_coords(location)' do
       it 'returns coords based on the search params', :vcr do
-        search_response = CoordinateService.get_coord("Denver,CO")
+        search_response = CoordinatesService.get_coord("Denver,CO")
         expect(search_response).to be_a Hash
 
         expect(search_response[:results][0]).to have_key(:locations)

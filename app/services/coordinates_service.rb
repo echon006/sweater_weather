@@ -1,4 +1,4 @@
-class CoordinateService
+class CoordinatesService
   def self.get_coord(location)
     get_data("v1/address?location=#{location}")
   end
