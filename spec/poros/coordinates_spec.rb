@@ -4,9 +4,11 @@ RSpec.describe Coordinates do
   it 'exists', :vcr do
     data = { results:
       [ locations: [
-        {:lat=> 39.738453,
-         :lng=> -104.984853
-         }]]}
+         { latLng: {
+           :lat=> 39.738453,
+           :lng=> -104.984853
+        }
+      }]]}
     coord = Coordinates.new(data)
 
     expect(coord.lat).to eq(39.738453)
