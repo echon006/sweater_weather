@@ -1,5 +1,6 @@
 class Coordinates
-  attr_reader :lat, :lng
+  attr_reader :lat,
+              :lng
 
   def initialize(data)
     @lat = data[:results][0][:locations][0][:latLng][:lat]
