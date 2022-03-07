@@ -226,6 +226,38 @@
           null
         ]
       },
+      "/Users/ericchon/turing/3mod/projects/sweater_weather/spec/facades/image_facade_spec.rb": {
+        "lines": [
+          1,
+          null,
+          1,
+          1,
+          1,
+          1,
+          null,
+          1,
+          null,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          null,
+          null,
+          null
+        ]
+      },
+      "/Users/ericchon/turing/3mod/projects/sweater_weather/app/facades/image_facade.rb": {
+        "lines": [
+          1,
+          1,
+          1,
+          1,
+          null,
+          null
+        ]
+      },
       "/Users/ericchon/turing/3mod/projects/sweater_weather/spec/facades/weather_facade_spec.rb": {
         "lines": [
           1,
@@ -458,6 +490,11 @@
           null
         ]
       },
+      "/Users/ericchon/turing/3mod/projects/sweater_weather/spec/poros/image_spec.rb": {
+        "lines": [
+
+        ]
+      },
       "/Users/ericchon/turing/3mod/projects/sweater_weather/spec/requests/api/v1/forecasts_request_spec.rb": {
         "lines": [
           1,
@@ -544,6 +581,53 @@
           null
         ]
       },
+      "/Users/ericchon/turing/3mod/projects/sweater_weather/spec/services/image_service_spec.rb": {
+        "lines": [
+          1,
+          null,
+          1,
+          1,
+          1,
+          1,
+          null,
+          1,
+          1,
+          null,
+          1,
+          1,
+          null,
+          1,
+          1,
+          null,
+          1,
+          1,
+          null,
+          null,
+          null
+        ]
+      },
+      "/Users/ericchon/turing/3mod/projects/sweater_weather/app/services/image_service.rb": {
+        "lines": [
+          1,
+          1,
+          2,
+          null,
+          null,
+          1,
+          null,
+          1,
+          2,
+          2,
+          null,
+          null,
+          null,
+          1,
+          2,
+          2,
+          null,
+          null
+        ]
+      },
       "/Users/ericchon/turing/3mod/projects/sweater_weather/spec/services/weather_service_spec.rb": {
         "lines": [
           1,
@@ -552,6 +636,7 @@
           1,
           1,
           1,
+          null,
           1,
           1,
           1,
@@ -592,6 +677,29 @@
           null
         ]
       },
+      "/Users/ericchon/turing/3mod/projects/sweater_weather/app/poros/image.rb": {
+        "lines": [
+          1,
+          1,
+          null,
+          null,
+          null,
+          1,
+          1,
+          1,
+          1,
+          null,
+          null,
+          1,
+          null,
+          1,
+          null,
+          null,
+          null,
+          null,
+          null
+        ]
+      },
       "/Users/ericchon/turing/3mod/projects/sweater_weather/app/controllers/api/v1/forecasts_controller.rb": {
         "lines": [
           1,
@@ -621,6 +729,6 @@
         ]
       }
     },
-    "timestamp": 1646609208
+    "timestamp": 1646615346
   }
 }
