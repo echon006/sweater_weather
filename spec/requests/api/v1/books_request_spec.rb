@@ -15,7 +15,7 @@ RSpec.describe 'Book API' do
 
     expect(book_response[:data]).to have_key :id
     expect(book_response[:data]).to have_key :type
-    expect(book_response[:data][:type]).to eq("books")
+    expect(book_response[:data][:type]).to eq("book")
 
     expect(book_response[:data]).to have_key :attributes
     expect(book_response[:data][:attributes]).to be_a Hash
