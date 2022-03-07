@@ -195,7 +195,7 @@
           null,
           null,
           1,
-          1,
+          2,
           null,
           null,
           null,
@@ -212,8 +212,38 @@
           1,
           1,
           1,
+          1,
           null,
           null,
+          null
+        ]
+      },
+      "/Users/ericchon/turing/3mod/projects/sweater_weather/app/controllers/api/v1/users_controller.rb": {
+        "lines": [
+          1,
+          1,
+          null,
+          null,
+          1,
+          2,
+          1,
+          1,
+          null,
+          1,
+          null,
+          null,
+          null,
+          1,
+          null,
+          1,
+          1,
+          null,
+          null
+        ]
+      },
+      "/Users/ericchon/turing/3mod/projects/sweater_weather/app/controllers/application_controller.rb": {
+        "lines": [
+          1,
           null
         ]
       },
@@ -225,6 +255,7 @@
           1,
           1,
           null,
+          1,
           null
         ]
       },
@@ -234,8 +265,22 @@
           1,
           null
         ]
+      },
+      "/Users/ericchon/turing/3mod/projects/sweater_weather/app/serializers/user_serializer.rb": {
+        "lines": [
+          1,
+          1,
+          null,
+          1,
+          null,
+          1,
+          1,
+          null,
+          null,
+          null
+        ]
       }
     },
-    "timestamp": 1646689735
+    "timestamp": 1646692896
   }
 }
