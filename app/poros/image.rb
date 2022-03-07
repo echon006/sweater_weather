@@ -15,5 +15,4 @@ class Image
       author: data[:name]
     }
   end
-
 end
