@@ -211,6 +211,7 @@
           1,
           1,
           1,
+          1,
           null,
           null,
           null
@@ -252,8 +253,8 @@
         "lines": [
           1,
           1,
-          1,
-          1,
+          2,
+          2,
           null,
           null
         ]
@@ -523,14 +524,14 @@
           null,
           null,
           1,
-          2,
-          2,
-          2,
+          3,
+          3,
+          3,
           null,
           null,
           1,
           null,
-          2,
+          3,
           null,
           null,
           null,
@@ -569,6 +570,38 @@
           1,
           null,
           1,
+          1,
+          1,
+          null,
+          null
+        ]
+      },
+      "/Users/ericchon/turing/3mod/projects/sweater_weather/spec/requests/api/v1/image_request_spec.rb": {
+        "lines": [
+          1,
+          null,
+          1,
+          1,
+          null,
+          1,
+          null,
+          1,
+          null,
+          1,
+          1,
+          null,
+          1,
+          1,
+          null,
+          1,
+          1,
+          1,
+          1,
+          1,
+          null,
+          1,
+          1,
+          null,
           1,
           1,
           null,
@@ -653,20 +686,20 @@
         "lines": [
           1,
           1,
-          2,
+          3,
           null,
           null,
           1,
           null,
           1,
-          2,
-          2,
+          3,
+          3,
           null,
           null,
           null,
           1,
-          2,
-          2,
+          3,
+          3,
           null,
           null
         ]
@@ -747,8 +780,30 @@
           null,
           null
         ]
+      },
+      "/Users/ericchon/turing/3mod/projects/sweater_weather/app/controllers/api/v1/images_controller.rb": {
+        "lines": [
+          1,
+          1,
+          1,
+          1,
+          null,
+          null
+        ]
+      },
+      "/Users/ericchon/turing/3mod/projects/sweater_weather/app/serializers/image_serializer.rb": {
+        "lines": [
+          1,
+          1,
+          null,
+          1,
+          null,
+          null,
+          null,
+          null
+        ]
       }
     },
-    "timestamp": 1646615821
+    "timestamp": 1646616497
   }
 }
