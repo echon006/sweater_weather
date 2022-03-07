@@ -1,18 +1,8 @@
 require 'rails_helper'
 
 RSpec.describe Book do
-  xit 'exists', :vcr do
-
-    weather_data = current_weather: {:datetime=>"09:48, March  7, -0700",
-   :sunrise=>"06:24, March  7, -0700",
-   :sunset=>"17:58, March  7, -0700",
-   :temp=>23.32,
-   :feels_like=>23.32,
-   :humidity=>64,
-   :uvi=>2.61,
-   :visibility=>10000,
-   :conditions=>"snow",
-   :icon=>"13d"},
+  it 'exists', :vcr do
+    weather_data =  WeatherFacade.get_forecast("Denver, CO")
 
     book_data =
     {:numFound=>657,
@@ -23,9 +13,61 @@ RSpec.describe Book do
           :publisher=>["Universal Map Enterprises"]
         }]}
     location = "Denver,CO"
+    quantity = "5"
 
-    book = Book.new(weather_data, book_data, location)
+    book = Book.new(weather_data, book_data, location, quantity)
 
+    expect(book.destination).to be_a String
+    expect(book.destination).to eq("Denver,CO")
+
+    expect(book.forecast).to be_an Hash
+    expect(book.total_books_found).to be_an Integer
+    expect(book.books).to be_an Array
+  end
+
+  it "checks that forecast has the correct keys", :vcr do
+    weather_data =  WeatherFacade.get_forecast("Denver, CO")
+
+    book_data =
+    {:numFound=>657,
+     :docs=>
+        [{
+          :title=>"Denver, Co",
+          :isbn=>["9780762507849", "0762507845"],
+          :publisher=>["Universal Map Enterprises"]
+        }]}
+    location = "Denver,CO"
+    quantity = "5"
+
+    book = Book.new(weather_data, book_data, location, quantity)
+
+    expect(book.forecast).to be_an Hash
+    expect(book.forecast).to have_key :summary
+    expect(book.forecast).to have_key :temperature
+  end
+
+  it "checks that a single book has the correct keys", :vcr do
+    weather_data =  WeatherFacade.get_forecast("Denver, CO")
+
+    book_data =
+    {:numFound=>657,
+     :docs=>
+        [{
+          :title=>"Denver, Co",
+          :isbn=>["9780762507849", "0762507845"],
+          :publisher=>["Universal Map Enterprises"]
+        }]}
+    location = "Denver,CO"
+    quantity = "5"
+
+    book = Book.new(weather_data, book_data, location, quantity)
+
+    expect(book.books).to be_an Array
+    expect(book.books.first).to be_an Hash
+
+    expect(book.books.first).to have_key :isbn
+    expect(book.books.first).to have_key :title
+    expect(book.books.first).to have_key :publisher
 
   end
 end

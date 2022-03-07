@@ -3,7 +3,7 @@ require 'rails_helper'
 RSpec.describe BooksFacade do
   describe 'get_book(location)' do
     it 'returns book for a searched location', :vcr do
-    book = BooksFacade.get_book("Denver, CO")
+    book = BooksFacade.get_book("Denver, CO", "5")
 
     expect(book).to be_a Book
 
@@ -18,6 +18,7 @@ RSpec.describe BooksFacade do
 
     expect(book.books).to_not be_nil
     expect(book.books).to be_an Array
+    expect(book.books.count).to eq(5)
     end
   end
 end

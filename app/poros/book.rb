@@ -6,12 +6,12 @@ class Book
               :books
 
 
-  def initialize(weather_data, book_data, location)
+  def initialize(weather_data, book_data, location, quantity)
     @id = nil
     @destination = location
     @forecast = weather(weather_data.current_weather)
     @total_books_found = book_data[:numFound]
-    @books = book_list(book_data[:docs])
+    @books = book_list(book_data[:docs]).take(quantity.to_i)
   end
 
   def weather(data)
