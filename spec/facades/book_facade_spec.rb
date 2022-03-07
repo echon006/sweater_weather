@@ -14,10 +14,10 @@ RSpec.describe BooksFacade do
     expect(book.forecast).to be_a Hash
 
     expect(book.total_books_found).to_not be_nil
-    expect(book.lat).to be_an Integer
+    expect(book.total_books_found).to be_an Integer
 
     expect(book.books).to_not be_nil
-    expect(book.lat).to be_an Array
+    expect(book.books).to be_an Array
     end
   end
 end
