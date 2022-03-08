@@ -195,7 +195,7 @@
           null,
           null,
           1,
-          1,
+          2,
           null,
           null,
           null,
@@ -214,37 +214,64 @@
           1,
           1,
           1,
+          1,
           null,
           null,
           null
         ]
       },
-      "/Users/ericchon/turing/3mod/projects/sweater_weather/app/poros/road_trip.rb": {
+      "/Users/ericchon/turing/3mod/projects/sweater_weather/app/controllers/api/v1/road_trips_controller.rb": {
         "lines": [
           1,
           1,
           null,
           null,
-          null,
-          null,
-          null,
-          null,
           1,
           1,
           1,
           1,
           1,
           null,
+          null
+        ]
+      },
+      "/Users/ericchon/turing/3mod/projects/sweater_weather/app/controllers/application_controller.rb": {
+        "lines": [
+          1,
+          null
+        ]
+      },
+      "/Users/ericchon/turing/3mod/projects/sweater_weather/app/facades/road_trip_facade.rb": {
+        "lines": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          null,
+          null
+        ]
+      },
+      "/Users/ericchon/turing/3mod/projects/sweater_weather/app/services/road_trip_service.rb": {
+        "lines": [
+          1,
+          null,
+          1,
+          1,
+          null,
           null,
           1,
           null,
           1,
+          1,
+          1,
           null,
           null,
           null,
-          null,
-          null,
-          null,
+          1,
+          1,
+          1,
           null,
           null
         ]
@@ -317,30 +344,49 @@
           null
         ]
       },
-      "/Users/ericchon/turing/3mod/projects/sweater_weather/app/services/road_trip_service.rb": {
+      "/Users/ericchon/turing/3mod/projects/sweater_weather/app/poros/road_trip.rb": {
         "lines": [
           1,
-          null,
-          1,
           1,
           null,
           null,
-          1,
           null,
-          1,
-          1,
-          1,
           null,
           null,
           null,
           1,
           1,
           1,
+          1,
+          1,
+          null,
+          null,
+          1,
+          null,
+          1,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ]
+      },
+      "/Users/ericchon/turing/3mod/projects/sweater_weather/app/serializers/road_trip_serializer.rb": {
+        "lines": [
+          1,
+          1,
+          null,
+          1,
+          null,
+          null,
           null,
           null
         ]
       }
     },
-    "timestamp": 1646762089
+    "timestamp": 1646763109
   }
 }
