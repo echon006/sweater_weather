@@ -13,7 +13,6 @@ RSpec.describe RoadTripService do
     it 'It cannot check for distance outside of the US', :vcr do
       route_response = RoadTripService.find_route("Denver,CO", " London, UK")
       expect(route_response).to be_a Hash
-
       expect(route_response[:route]).not_to have_key :formattedTime
       expect(route_response[:route]).to have_key :routeError
     end

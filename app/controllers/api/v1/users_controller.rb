@@ -7,7 +7,7 @@ class Api::V1::UsersController < ApplicationController
       user = User.create(user_params)
       render json: UserSerializer.new(user), status: 201
     else
-      render status: 404
+      render json: { data: { message: "Passwords do not match"}}, status: 404
     end
   end
 

@@ -30,9 +30,13 @@ RSpec.describe 'Users API' do
                 password_confirmation: 'password1'
                 }
 
-  headers = { 'CONTENT_TYPE' => 'application/json', "Accept" => 'application/json' }
-  post '/api/v1/users', headers: headers, params: JSON.generate(user_info)
-  expect(response).to_not be_successful
-  expect(response.status).to eq(404)
-end
+    headers = { 'CONTENT_TYPE' => 'application/json', "Accept" => 'application/json' }
+    post '/api/v1/users', headers: headers, params: JSON.generate(user_info)
+
+    created_user = JSON.parse(response.body, symbolize_names: true)
+    expect(response).to_not be_successful
+    expect(response.status).to eq(404)
+    expect(created_user[:data]).to have_key :message
+    expect(created_user[:data][:message]).to eq("Passwords do not match")
+  end
 end
