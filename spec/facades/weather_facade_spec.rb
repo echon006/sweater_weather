@@ -6,7 +6,7 @@ RSpec.describe WeatherFacade do
     forecast = WeatherFacade.get_forecast("Denver, CO")
 
     expect(forecast).to be_a Forecast
-    
+
     expect(forecast.id).to be_nil
     expect(forecast.current_weather).to_not be_nil
     expect(forecast.current_weather).to be_a(Hash)
