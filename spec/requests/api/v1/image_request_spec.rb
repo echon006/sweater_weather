@@ -25,4 +25,18 @@ RSpec.describe 'Image API' do
     expect(image[:data][:attributes]).to have_key :credit
     expect(image[:data][:attributes][:credit]).to be_an Hash
   end
+
+  it "returns an error if not location is given", :vcr do
+    get "/api/v1/images?location="
+
+    image = JSON.parse(response.body, symbolize_names: true)
+
+    expect(response).not_to be_successful
+    expect(response.status).to eq(404)
+
+    expect(image).to be_a Hash
+    expect(image).to have_key :data
+    expect(image[:data]).to have_key :message
+    expect(image[:data][:message]).to eq("Must have a location")
+  end
 end

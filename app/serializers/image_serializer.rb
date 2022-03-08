@@ -1,8 +1,7 @@
 class ImageSerializer
   include JSONAPI::Serializer
 
-  attributes :id,
-             :url,
+  attributes :url,
              :credit
 
 end

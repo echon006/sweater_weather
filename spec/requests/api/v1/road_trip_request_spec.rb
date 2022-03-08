@@ -69,4 +69,32 @@ RSpec.describe 'roadtrip API' do
     expect(route[:data][:attributes][:weather_at_eta][:temperature]).to eq("")
     expect(route[:data][:attributes][:weather_at_eta][:conditions]).to eq("")
   end
+
+  it "returns an error if start location is not given", :vcr do
+    post "/api/v1/road_trips?destination=London, UK"
+
+    route = JSON.parse(response.body, symbolize_names: true)
+
+    expect(response).not_to be_successful
+    expect(response.status).to eq(404)
+
+    expect(route).to be_a Hash
+    expect(route).to have_key :data
+    expect(route[:data]).to have_key :message
+    expect(route[:data][:message]).to eq("Both starting location and destination must be specified")
+  end
+
+  it "returns an error if destination is not given", :vcr do
+    post "/api/v1/road_trips?origin=Denver,CO"
+
+    route = JSON.parse(response.body, symbolize_names: true)
+
+    expect(response).not_to be_successful
+    expect(response.status).to eq(404)
+
+    expect(route).to be_a Hash
+    expect(route).to have_key :data
+    expect(route[:data]).to have_key :message
+    expect(route[:data][:message]).to eq("Both starting location and destination must be specified")
+  end
 end

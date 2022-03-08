@@ -30,4 +30,18 @@ RSpec.describe 'forecast API' do
       expect(forecast[:data][:attributes][:hourly_weather]).to be_an Array
       expect(forecast[:data][:attributes][:hourly_weather].length).to eq(8)
   end
+
+  it "returns an error if not location is given", :vcr do
+    get "/api/v1/forecasts?location="
+
+    forecast = JSON.parse(response.body, symbolize_names: true)
+
+    expect(response).not_to be_successful
+    expect(response.status).to eq(404)
+
+    expect(forecast).to be_a Hash
+    expect(forecast).to have_key :data
+    expect(forecast[:data]).to have_key :message
+    expect(forecast[:data][:message]).to eq("Must have a location")
+  end
 end
