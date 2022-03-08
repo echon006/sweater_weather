@@ -1,6 +1,7 @@
-class CoordinatesService
-  def self.get_coord(location)
-    get_data("/geocoding/v1/address?location=#{location}")
+class RoadTripService
+
+  def self.find_route(start_location, destination)
+    get_data("/directions/v2/route?from=#{start_location}&to=#{destination}")
   end
 
   private

@@ -6,5 +6,4 @@ class UserSerializer
   attribute :api_key do |user|
     user.auth_token
   end
-
 end
