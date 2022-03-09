@@ -106,13 +106,14 @@ RSpec.describe 'roadtrip API' do
     expect(route[:data][:message]).to eq("Both starting location and destination must be specified")
   end
 
-  it "returns an error if no API key is not valid" do
+  it "returns an error if no API key is not valid", :vcr do
     user = User.create!(email: "user_1@email.com", password: 'password_1', password_confirmation: "password_1", auth_token: "1234567")
+    user_1 = User.create!(email: "user_2@email.com", password: 'password_2', password_confirmation: "password_2", auth_token: "1234568")
 
     post "/api/v1/road_trips?origin=Denver,CO&destination=Boulder,CO&api_key=123456"
 
     post "/api/v1/road_trips?origin=Denver,CO"
-    
+
     expect(response).not_to be_successful
     expect(response.status).to eq(404)
   end

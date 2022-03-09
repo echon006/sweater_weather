@@ -14,7 +14,7 @@
       <img src="./assets/0.12.3/loading.gif" alt="loading"/>
     </div>
     <div id="wrapper" class="hide">
-      <div class="timestamp">Generated <abbr class="timeago" title="2022-03-09T11:46:42-07:00">2022-03-09T11:46:42-07:00</abbr></div>
+      <div class="timestamp">Generated <abbr class="timeago" title="2022-03-09T11:51:01-07:00">2022-03-09T11:51:01-07:00</abbr></div>
       <ul class="group_tabs"></ul>
 
       <div id="content">
@@ -43,8 +43,8 @@
   </div>
 
   <div class="t-line-summary">
-    <b>602</b> relevant lines,
-    <span class="green"><b>601</b> lines covered</span> and
+    <b>603</b> relevant lines,
+    <span class="green"><b>602</b> lines covered</span> and
     <span class="red"><b>1</b> lines missed. </span>
     (<span class="green">
   99.83%
@@ -579,9 +579,9 @@
           <tr class="t-file">
             <td class="strong t-file__name"><a href="#5f1ed2fa1b20e636292f88ef407b2f6b04f53124" class="src_link" title="spec/requests/api/v1/road_trip_request_spec.rb">spec/requests/api/v1/road_trip_request_spec.rb</a></td>
             <td class="green strong cell--number t-file__coverage">100.00 %</td>
-            <td class="cell--number">119</td>
-            <td class="cell--number">73</td>
-            <td class="cell--number">73</td>
+            <td class="cell--number">120</td>
+            <td class="cell--number">74</td>
+            <td class="cell--number">74</td>
             <td class="cell--number">0</td>
             <td class="cell--number">1.00</td>
             
@@ -11658,8 +11658,8 @@
     
 
     <div class="t-line-summary">
-      <b>73</b> relevant lines.
-      <span class="green"><b>73</b> lines covered</span> and
+      <b>74</b> relevant lines.
+      <span class="green"><b>74</b> lines covered</span> and
       <span class="red"><b>0</b> lines missed.</span>
     </div>
 
@@ -12865,7 +12865,7 @@
 
             
 
-            <code class="ruby">  it &quot;returns an error if no API key is not valid&quot; do</code>
+            <code class="ruby">  it &quot;returns an error if no API key is not valid&quot;, :vcr do</code>
           </li>
         </div>
       
@@ -12881,7 +12881,18 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="111">
+          <li class="covered" data-hits="1" data-linenumber="111">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">    user_1 = User.create!(email: &quot;user_2@email.com&quot;, password: &#39;password_2&#39;, password_confirmation: &quot;password_2&quot;, auth_token: &quot;1234568&quot;)</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="112">
             
             
 
@@ -12892,7 +12903,7 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="112">
+          <li class="covered" data-hits="1" data-linenumber="113">
             <span class="hits">1</span>
             
 
@@ -12903,7 +12914,7 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="113">
+          <li class="never" data-hits="" data-linenumber="114">
             
             
 
@@ -12914,7 +12925,7 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="114">
+          <li class="covered" data-hits="1" data-linenumber="115">
             <span class="hits">1</span>
             
 
@@ -12925,24 +12936,13 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="115">
+          <li class="never" data-hits="" data-linenumber="116">
             
             
 
             
 
-            <code class="ruby">    </code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="covered" data-hits="1" data-linenumber="116">
-            <span class="hits">1</span>
-            
-
-            
-
-            <code class="ruby">    expect(response).not_to be_successful</code>
+            <code class="ruby"></code>
           </li>
         </div>
       
@@ -12953,12 +12953,23 @@
 
             
 
+            <code class="ruby">    expect(response).not_to be_successful</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="118">
+            <span class="hits">1</span>
+            
+
+            
+
             <code class="ruby">    expect(response.status).to eq(404)</code>
           </li>
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="118">
+          <li class="never" data-hits="" data-linenumber="119">
             
             
 
@@ -12969,7 +12980,7 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="119">
+          <li class="never" data-hits="" data-linenumber="120">
             
             
 
