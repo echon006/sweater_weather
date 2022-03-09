@@ -42,13 +42,6 @@ class RoadTrip
       arrival_hour
     else
       0
-    end 
+    end
   end
-
-
-
-
-  # Get current time
-  # add travel time
-  # find weather at given time
 end
