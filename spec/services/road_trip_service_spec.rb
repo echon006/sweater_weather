@@ -18,3 +18,4 @@ RSpec.describe RoadTripService do
     end
   end
 end
+ 

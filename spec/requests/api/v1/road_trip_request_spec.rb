@@ -2,8 +2,9 @@ require 'rails_helper'
 
 RSpec.describe 'roadtrip API' do
     it 'returns a RoadTrip JSON', :vcr do
+      user = User.create!(email: "user_1@email.com", password: 'password_1', password_confirmation: "password_1", auth_token: "1234567")
 
-      post "/api/v1/road_trips?origin=Denver,CO&destination=Boulder,CO"
+      post "/api/v1/road_trips?origin=Denver,CO&destination=Boulder,CO&api_key=1234567"
 
       route = JSON.parse(response.body, symbolize_names: true)
 
@@ -36,7 +37,9 @@ RSpec.describe 'roadtrip API' do
   end
 
   it "returns an specific error if destination is not valid ", :vcr do
-    post "/api/v1/road_trips?origin=Denver,CO&destination=London, UK"
+    user = User.create!(email: "user_1@email.com", password: 'password_1', password_confirmation: "password_1", auth_token: "1234567")
+
+    post "/api/v1/road_trips?origin=Denver,CO&destination=London,UK&api_key=1234567"
 
     route = JSON.parse(response.body, symbolize_names: true)
 
@@ -71,7 +74,10 @@ RSpec.describe 'roadtrip API' do
   end
 
   it "returns an error if start location is not given", :vcr do
-    post "/api/v1/road_trips?destination=London, UK"
+
+    user = User.create!(email: "user_1@email.com", password: 'password_1', password_confirmation: "password_1", auth_token: "1234567")
+
+    post "/api/v1/road_trips?&destination=London,UK&api_key=1234567"
 
     route = JSON.parse(response.body, symbolize_names: true)
 
@@ -85,7 +91,9 @@ RSpec.describe 'roadtrip API' do
   end
 
   it "returns an error if destination is not given", :vcr do
-    post "/api/v1/road_trips?origin=Denver,CO"
+    user = User.create!(email: "user_1@email.com", password: 'password_1', password_confirmation: "password_1", auth_token: "1234567")
+
+    post "/api/v1/road_trips?origin=Denver,CO&&api_key=1234567"
 
     route = JSON.parse(response.body, symbolize_names: true)
 
@@ -96,5 +104,16 @@ RSpec.describe 'roadtrip API' do
     expect(route).to have_key :data
     expect(route[:data]).to have_key :message
     expect(route[:data][:message]).to eq("Both starting location and destination must be specified")
+  end
+
+  it "returns an error if no API key is not valid" do
+    user = User.create!(email: "user_1@email.com", password: 'password_1', password_confirmation: "password_1", auth_token: "1234567")
+
+    post "/api/v1/road_trips?origin=Denver,CO&destination=Boulder,CO&api_key=123456"
+
+    post "/api/v1/road_trips?origin=Denver,CO"
+    
+    expect(response).not_to be_successful
+    expect(response.status).to eq(404)
   end
 end

@@ -15,4 +15,4 @@ RSpec.describe RoadTrip do
     expect(route.travel_time).to be_an String
     expect(route.weather_at_eta).to be_an Hash
   end
-end
+end 
