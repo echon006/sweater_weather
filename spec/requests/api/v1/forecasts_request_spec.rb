@@ -4,7 +4,6 @@ RSpec.describe 'forecast API' do
     it 'returns a forecast in JSON', :vcr do
 
       get "/api/v1/forecasts?location=Denver,CO"
-
       forecast = JSON.parse(response.body, symbolize_names: true)
 
       expect(response).to be_successful
